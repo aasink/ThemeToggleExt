@@ -1,14 +1,24 @@
 {
-  "name": "themetoggleext",
+  "name": "theme-toggle-ext",
+  "displayName": "Theme Toggle Extension",
+  "description": "VS Code Extension that toggles the theme with a button on the bottom status bar.",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/aasink/ThemeToggleExt"
+	},
+  "engines": { 
+    "vscode": "^1.80.0" 
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "main": "./src/extension.js",
+  "contributes": { 
+    "commands": [ 
+      { 
+        "command": "themeToggle.toggle", 
+        "title": "Toggle Theme" 
+      } 
+    ] 
+  },
   "dependencies": {
     "vscode": "^1.1.37"
   }
